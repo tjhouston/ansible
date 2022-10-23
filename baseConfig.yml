@@ -27,4 +27,14 @@
         - libapache2-mod-php
       state: latest
       update_cache: yes
-    when: ansible_distribution in ["Ubuntu","Kali"]
+    when: ansible_distribution == "Ubuntu"
+  - name: Create default html site
+    tags: apache,apache,ubuntu
+    copy:
+      src: default_site.html
+      dest: /var/www/html/index.html
+      owner: root
+      grop: root
+      mode: 0644
+
+      
