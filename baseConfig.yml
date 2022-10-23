@@ -59,7 +59,7 @@
       path: /var/www/html/index.html
       regexp: '^ServerAdmin'
       line: ServerAdmin tj@tjhouston.com
-      when: ansible_distribution == "Ubuntu"
+    when: ansible_distribution == "Ubuntu"
 
   - name: start service
     tags: apache2
