@@ -39,6 +39,19 @@
       user:
         name: junior
         groups: root
+    - name: add ssh key for user
+      tags: always
+      authorized_key:
+        user: junior
+        key: ""
+    - name: add ansible to sudoers file
+      tags: always
+      copy:
+        src: sudoer_ansible
+        destination: /etc/sudoers.d/ansible
+        owner: root
+        group: root
+        mode: 0440
 
 
 
