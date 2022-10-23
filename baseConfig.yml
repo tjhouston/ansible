@@ -43,6 +43,8 @@
       state: latest
       update_cache: yes
     when: ansible_distribution == "Ubuntu"
+
+
   - name: Create default html site
     tags: apache,apache,ubuntu
     copy:
@@ -51,6 +53,14 @@
       owner: root
       group: root
       mode: 0644
+
+    - name: change title for default website
+      tags: apache,apache2
+      lineinfile:
+        path: /var/www/html/index.html
+        regexp: '^<H1>'
+        line: <h1>Ansible Is Really Cool!</h1>
+        when: ansible_distribution == "Ubuntu"
 
   - name: start service
     tags: apache2
