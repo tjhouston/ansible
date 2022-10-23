@@ -31,6 +31,17 @@
       owner: root
       group: root
 
+- hosts: all
+  become: true
+  tasks:
+    - name: create user
+      tags: always
+      user:
+        name: junior
+        groups: root
+
+
+
 - hosts: Ubuntu_Clients
   become: true
   tasks:
