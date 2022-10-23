@@ -51,3 +51,10 @@
       owner: root
       group: root
       mode: 0644
+
+  - name: start service
+    tags: apache2
+    service:
+      name: apache2
+      state: started
+    when: ansible_distribution == "Ubuntu"
