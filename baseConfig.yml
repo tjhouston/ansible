@@ -57,8 +57,8 @@
     tags: apache,apache2
     lineinfile:
       path: /var/www/html/index.html
-      regexp: '^<H1>'
-      line: <h1>Ansible Is Really Cool!</h1>
+      regexp: '^ServerAdmin'
+      line: ServerAdmin tj@tjhouston.com
       when: ansible_distribution == "Ubuntu"
 
   - name: start service
