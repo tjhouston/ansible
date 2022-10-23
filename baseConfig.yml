@@ -42,7 +42,7 @@
     - name: add ssh key for user
       tags: always
       authorized_key:
-        user: junior
+        user: ansible
         key: "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDP8C12RrEcPtisGUdLSLgutLou4t0O47fwlJksXKq5/ ansible"
     - name: add ansible to sudoers file
       tags: always
