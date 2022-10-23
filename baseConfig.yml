@@ -34,7 +34,5 @@
       src: default_site.html
       dest: /var/www/html/index.html
       owner: root
-      grop: root
+      group: root
       mode: 0644
-
-      
