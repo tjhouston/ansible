@@ -2,18 +2,19 @@
 - hosts: all
   become: true
   pre_tasks:
-  - name: install updates (Kali)
+  - name: update repo cache (Kali)
     tags: always
     apt:
       update_cache: yes
       changed_when: false
 
     when: ansible_distribution == "Kali"
-  - name: install updates (Ubuntu)
+
+  - name: update repo cache (Ubuntu)
     tags: always
     apt:
       update_cache: yes
-    changed_when: false
+      changed_when: false
     when: ansible_distribution == "Ubuntu"
 
 - hosts: Workstations
