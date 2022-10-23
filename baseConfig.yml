@@ -8,11 +8,11 @@
       update_cache: yes
     when: ansible_distribution == "Kali"
 
-- name: install updates (Ubuntu)
-  apt:
-    update_only: yes
-    update_cache: yes
-  when: ansible_distribution == "Ubuntu"
+  - name: install updates (Ubuntu)
+    apt:
+      update_only: yes
+      update_cache: yes
+    when: ansible_distribution == "Ubuntu"
 
 - hosts: Ubuntu_Clients
   become: true
