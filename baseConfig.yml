@@ -16,7 +16,7 @@
       update_cache: yes
     when: ansible_distribution == "Ubuntu"
 
-- hosts: workstations
+- hosts: Workstations
   become: true
   tasks:
   - name: install unzip
