@@ -7,18 +7,18 @@
     apt:
       update_cache: yes
 #    when: ansible_distribution == "Ubuntu" <--- single
-    when: ansible_distribution == ["Ubuntu", "Debian", "Kali GNU/Linux"]
+    when: ansible_distribution == ["Ubuntu", "Debian", "Kali"]
 
 
   - name: install apache2 package
     apt:
       name: apache2
       state: latest
-    when: ansible_distribution == ["Ubuntu", "Debian", "Kali GNU/Linux"]
+    when: ansible_distribution == ["Ubuntu", "Debian", "Kali"]
 
 
   - name: install PHP support for apache2
     apt:
       name: libapache2-mod-php
       state: latest
-    when: ansible_distribution == ["Ubuntu", "Debian", "Kali GNU/Linux"]
+    when: ansible_distribution == ["Ubuntu", "Debian", "Kali"]
