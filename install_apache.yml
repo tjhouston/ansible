@@ -10,3 +10,7 @@
   - name: install apache2 package
     apt:
       name: apache2
+
+  - name: install PHP support for apache2
+    apt:
+      name: libapache2-mod-php 
