@@ -10,15 +10,10 @@
     when: ansible_distribution in ["Ubuntu", "Debian", "Kali"]
 
 
-  - name: install apache2 package
+  - name: install apache2 and PHP support packages
     apt:
-      name: apache2
-      state: latest
-    when: ansible_distribution in ["Ubuntu", "Debian", "Kali"]
-
-
-  - name: install PHP support for apache2
-    apt:
-      name: libapache2-mod-php
+      name:
+        - apache2
+        - libapache2-mod-php
       state: latest
     when: ansible_distribution in ["Ubuntu", "Debian", "Kali"]
