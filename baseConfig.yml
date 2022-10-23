@@ -48,7 +48,7 @@
       tags: always
       copy:
         src: sudoer_ansible
-        destination: /etc/sudoers.d/ansible
+        dest: /etc/sudoers.d/ansible
         owner: root
         group: root
         mode: 0440
